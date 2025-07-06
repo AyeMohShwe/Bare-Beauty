@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bare Beauty Skincare Products Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="wishlist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+    <!--Header Section Starts-->
+    <header>
+
+        <!--Header 1 for Logo, search bar and account, cart, wishlist-->
+        <div class="header-1"> 
+            <a href="#" class="logo">Bare Beauty </a>
+            <div class="form-container">
+                <form action="">
+                    <input type="search" placeholder="Search for Products or Brands" id="search" />
+                </form>
+            </div>
+            <ul>
+                <li><a href="account.html"> Account </a> <i class="fa fa-user-circle" aria-hidden="true"></i></li>
+                <li><a href="wishlist.html"> Wishlist </a> <i class="fa fa-heart" aria-hidden="true"></i></li>
+                <li><a href="cart.html"> Bag </a> <i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+
+        <!--Header 2 for Menu Bar-->
+
+        <div class="header-2" id="navbar"> 
+            <a href="index.html">Home</a>
+            <a href="bestsellers.html">Best Sellers</a>
+            <a href="allbrands.html">All Brands</a>
+            <a href="routine.html">Routine</a>
+            <div class="dropdown">
+                <button class="dropbtn">About Us
+                    <i class=""></i>
+                  </button>
+                <div class="aboutus-content">
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contactus.html">Contact Us</a>
+                </div>
+
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>  
+    
+    </header>
+<!--Header Section Ends-->
+
+<script>
+    function myFunction() {
+    var x = document.getElementById("navbar");
+    if (x.className === "header-2") {
+      x.className += " responsive";
+    } else {
+      x.className = "header-2";
+    }
+  }
+</script>
+
+<div id="wish-list-example" class="wishlist">
+    <form v-on:submit.prevent="addNewWish">
+      <label for="new-wish"><p>Add Products To Your Wishlist</p></label>
+      <input
+        v-model="newWishText"
+        id="new-wish"
+        placeholder="Glow Recipe Sleeping Mask"
+      >
+      <button class="btn">Add</button>
+    </form>
+    <ul>
+      <li
+        is="wish-item"
+        v-for="(wish, index) in wishes"
+        v-bind:key="wish.id"
+        v-bind:title="wish.title"
+        v-on:remove="wishes.splice(index, 1)"
+      ></li>
+    </ul>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="main.js"></script>
+<script src="./wishlist.js"></script>
+
+</body>
+</html>

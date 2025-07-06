@@ -1,0 +1,78 @@
+
+h1{
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.banner3-pic img{
+    height:auto;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.routine h2{
+    font-family: 'PT Serif', serif;
+    font-size: 30px;
+    text-align: center;
+
+}
+.routine .video{
+    position: relative;
+    padding-bottom: 56.25%; /* - 16:9 aspect ratio (most common) */
+    padding-top: 10px;
+    height: 0;
+    overflow: hidden;
+}
+.routine .video iframe, .routine .video object, .routine .video embed{
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 22.5%;
+    width: 60%;
+    height: 60%;
+}
+.container img{
+    width: 20%;
+    height:20%;
+    align-content: center;
+}
+.container{
+    background-color: rgb(255, 255, 255);
+    padding:20px;
+    margin:70px;
+    margin-top:6px;
+    text-align: center;
+    margin-bottom: 16px;
+    display:inline-block;
+    color:rgb(0, 0, 0);
+    flex-wrap: wrap;
+    flex:1 1 40rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+.container h3{
+    font-family: 'PT Serif', serif;
+    font-size: 20px;
+    font-style: italic;
+}
+.container p{
+    font-size:15px;
+}
+.container .btn{
+    padding:12px 24px;
+    border:none;
+    cursor:pointer;
+    background-color: lightcoral;
+    color: black;;
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 55%;
+    }
+
+}
+

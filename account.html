@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <!--Header Section Starts-->
+    <header>
+
+        <!--Header 1 for Logo, search bar and account, cart, wishlist-->
+        <div class="header-1"> 
+            <a href="#" class="logo">Bare Beauty </a>
+            <div class="form-container">
+                <form action="">
+                    <input type="search" placeholder="Search for Products or Brands" id="search" /> 
+                </form>
+            </div>
+            <ul>
+                <li><a href="account.html"> Account </a> <i class="fa fa-user-circle" aria-hidden="true"></i></li>
+                <li><a href="wishlist.html"> Wishlist </a> <i class="fa fa-heart" aria-hidden="true"></i></li>
+                <li><a href="cart.html"> Bag </a> <i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+
+        <!--Header 2 for Menu Bar-->
+
+        <div class="header-2" id="navbar"> 
+            <a href="index.html">Home</a>
+            <a href="bestsellers.html">Best Sellers</a>
+            <a href="allbrands.html">All Brands</a>
+            <a href="routine.html">Routine</a>
+            <div class="dropdown">
+                <button class="dropbtn">About Us
+                    <i class=""></i>
+                  </button>
+                <div class="aboutus-content">
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contactus.html">Contact Us</a>
+                </div>
+
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>   
+    
+    </header>
+<!--Header Section Ends-->
+
+<script>
+    function myFunction() {
+    var x = document.getElementById("navbar");
+    if (x.className === "header-2") {
+      x.className += " responsive";
+    } else {
+      x.className = "header-2";
+    }
+  }
+</script>
+<!---Form Input Bindings-->
+<div id="app" class="container">
+    <h2>Be a Member and Get 20% Off!</h2>
+    <form action="/action_page.php">
+      <label for="fname">First Name</label>
+      <input type="text" v-model="fname" placeholder="Enter first name.."/>
+      <label for="lname">Last Name</label>
+      <input type="text" v-model="lname" placeholder="Enter last name.."/>
+      <label for="email">Email</label>
+      <input type="text" v-model="email" name="email" placeholder="Your email address..">
+      
+      <label for="psw">Password</label>
+      <input type="password" id="psw" name="psw" placeholder="Enter Password.." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+      title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
+      <!---<select dynamic>-->
+      <label for="country">Country</label>
+      <select v-model="selected">
+        <option disabled value="">Select Country</option>
+        <option v-for="option in options" v-bind:value="option.value">
+            {{ option.text }}
+        </option>
+      </select>
+      <span>Your Country: {{ selected }}</span>
+      <input type="submit" value="Sign Up">
+    </form>
+  </div> 
+  
+  <div id="message">
+    <h3>Password must contain the following:</h3>
+    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+    <p id="number" class="invalid">A <b>number</b></p>
+    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+  </div>
+
+<!--Footer contains social media links-->
+<footer>
+    <div class="box-container">
+
+        <div class="box">
+            <h3>contact us</h3>
+            <p> <i class="fas fa-home"></i>
+                Cave Town, London
+                England UK
+            </p>
+            <p> <i class="fas fa-phone"></i>
+                +1268399445
+            </p>
+            <p> <i class="fas fa-globe"></i>
+                north@barebeauty.skin.com
+            </p>
+        </div>
+
+    </div>
+
+<p class="credit"> created by <span>Aye Moh Moh Shwe</span> | all rights reserved. </p>
+
+
+</footer>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="main.js"></script>
+<script src="account.js"></script>
+
+</body>
+</html>

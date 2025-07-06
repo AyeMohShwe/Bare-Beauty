@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="routine.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <!--Header Section Starts-->
+    <header>
+
+        <!--Header 1 for Logo, search bar and account, cart, whishlist-->
+        <div class="header-1"> 
+            <a href="#" class="logo">Bare Beauty </a>
+            <div class="form-container">
+                <form action="">
+                    <input type="search" placeholder="Search for Products or Brands" id="search" /> 
+                </form>
+            </div>
+            <ul>
+                <li><a href="account.html"> Account </a> <i class="fa fa-user-circle" aria-hidden="true"></i></li>
+                <li><a href="wishlist.html"> Wishlist </a> <i class="fa fa-heart" aria-hidden="true"></i></li>
+                <li><a href="cart.html"> Bag </a> <i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+
+        <!--Header 2 for Menu Bar-->
+
+        <div class="header-2" id="navbar"> 
+            <a href="index.html">Home</a>
+            <a href="bestsellers.html">Best Sellers</a>
+            <a href="allbrands.html">All Brands</a>
+            <a href="routine.html">Routine</a>
+            <div class="dropdown">
+                <button class="dropbtn">About Us
+                    <i class=""></i>
+                  </button>
+                <div class="aboutus-content">
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contactus.html">Contact Us</a>
+                    <a href="review.html">Review</a>
+                </div>
+
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>  
+    
+    </header>
+<!--Header Section Ends-->
+
+<script>
+    function myFunction() {
+    var x = document.getElementById("navbar");
+    if (x.className === "header-2") {
+      x.className += " responsive";
+    } else {
+      x.className = "header-2";
+    }
+  }
+</script>
+<!--Conditional Rendering-->
+<h1>Skincare Routine Tips</h1>
+<div id="app" class="container">
+    <img src="Pictures/Morning.gif" alt="">
+    <h3>Click the following button to see Morning Skincare Routine!</h3><br>
+    <button class="btn" @click="toggleMorning">Display Morning Skincare Routine!</button>
+    <div v-if="showMorning">
+        <h3>Try these steps for glowing skin!</h3>
+        <p>Step 1: Cleanse with Water</p>
+        <br>
+        <p>Step 2: Exfoliate</p>
+        <br>
+        <p>Step 3: Serum + Moisturiser</p>
+        <br>
+        <p>Step 4: Apply Sunscreen</p>
+        <br>
+    </div>
+    <div v-else>
+        <h3>No, thanks!</h3>
+        <p>Find out Our Best Morning Skincare Routine!</p>
+    </div>
+    <div v-show="showMorning">
+        <h3>Thank You!☼</h3>
+    </div>
+</div>
+<div id="app2" class="container">
+    <img src="Pictures/Night.gif" alt="">
+    <h3>Click the following button to see Night Skincare Routine!</h3><br>
+    <button class="btn" @click="toggleNight">Display Night Skincare Routine!</button>
+    <div v-if="showNight">
+        <h3>Try these steps to hydrate your skin!</h3>
+        <p>Step 1: Remove Makeup + Cleanse</p>
+        <br>
+        <p>Step 2: Apply Eye Cream + Toner</p>
+        <br>
+        <p>Step 3: Serum + Retinor + Moisturiser</p>
+        <br>
+        <p>Step 4: Apply Facial Oil</p>
+        <br>
+    </div>
+    <div v-else>
+        <h3>No, thanks!</h3>
+        <p>Find out Our Best Night Skincare Routine!</p>
+    </div>
+    <div v-show="showNight">
+        <h3>Thank You!☽</h3>>
+    </div>
+</div>
+<section class="banner3" id="banner3">
+    <div class="banner3-pic">
+        <img src="Pictures/website- site- internet_1.jpg" alt="">
+    </div>
+</section>
+
+<section class="routine" id="routine">
+    <h2>Hydrate Your Skin With Clinque</h2>
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qLABR7ne8h0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+</section>
+
+<!--Footer contains social media links-->
+<footer>
+    <div class="box-container">
+
+        <div class="box">
+            <h3>contact us</h3>
+            <p> <i class="fas fa-home"></i>
+                Cave Town, London
+                England UK
+            </p>
+            <p> <i class="fas fa-phone"></i>
+                +1268399445
+            </p>
+            <p> <i class="fas fa-globe"></i>
+                north@barebeauty.skin.com
+            </p>
+        </div>
+
+    </div>
+
+<p class="credit"> created by <span>Aye Moh Moh Shwe</span> | all rights reserved. </p>
+
+
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="main.js"></script>
+<script src="./routine.js"></script>
+
+</body>
+</html>

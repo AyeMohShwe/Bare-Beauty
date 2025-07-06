@@ -1,0 +1,213 @@
+
+.bestsellers{
+    min-height: 100vh;
+}
+.bestsellers h2{
+    font-size: 4rem;
+    font-family: 'PT Serif', serif;
+    font-style:normal;
+    text-align: center;
+    color:#000000e7;
+}
+
+.bestsellers .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    width: 85%;
+    margin:0 auto;
+}
+
+.bestsellers .box-container .box{
+    flex:1 1 30rem;
+    border:.1rem solid rgba(255, 255, 255, 0.158);
+    overflow: hidden;
+    position: relative;
+    margin:1rem 2rem;
+}
+
+.bestsellers .box-container .box .image{
+    height: 20rem;
+    padding:2rem;
+    text-align: center;
+    background:#ffffff;
+}
+
+.bestsellers .box-container .box .image img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.bestsellers .box-container .box .info p{
+    padding:1rem;
+    text-align: center;
+    font-size: 2rem;
+    color:#000000;
+}
+
+.bestsellers .box-container .box .info .subInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem;
+    border-top: .1rem solid rgba(250, 250, 250, 0.3);
+}
+
+.bestsellers .box-container .box .info .subInfo .price{
+    color:#000000;
+    font-size: 2rem;
+}
+
+.bestsellers .box-container .box .info .subInfo .stars i{
+    color:rgb(2, 2, 2);
+    font-size: 1.5rem;
+}
+
+.bestsellers .box-container .box .overlay{
+    position: absolute;
+    top:0; left: 0;
+    height:20rem;
+    width: 100%;
+    background:#E9C6C6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+}
+
+.bestsellers .box-container .box:hover .overlay{
+    transform: scale(1);
+}
+
+.bestsellers .box-container .box .overlay a{
+    font-size: 2rem;
+    padding:1.5rem 2rem;
+    background:#fff;
+    color:#000000b7;
+    margin:1rem;
+    transform: translateY(-15rem);
+    transition-delay: calc(.1s * var(--i));
+}
+
+.bestsellers .box-container .box:hover .overlay a{
+    transform: translateY(0rem);
+}
+
+.bestsellers .box-container .box .overlay a:hover{
+    color:#E9C6C6;
+}
+.feature{
+    min-height: 100vh;
+    background:linear-gradient(165deg, #fff 50%, var(--blue) 50.1%);
+    padding-bottom: 2rem;
+}
+
+.feature .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    margin:3rem auto;
+    width: 95%;
+    background:#fff;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+    border-radius: 1rem;
+}
+
+.feature .row .image-container{
+    display: flex;
+    align-items: center;
+}
+
+.feature .row .image-container .big-image img{
+    height: 30rem;
+    margin:2rem 0;
+    filter: drop-shadow(0 .1rem .5rem rgba(0, 0, 0, 0.116));
+}
+
+.feature .row .image-container .small-image{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+.feature .row .image-container .small-image img{
+    height:6rem;
+    padding: 1rem;
+    margin:1rem;
+    border:.1rem solid rgba(179, 179, 179, 0.075);
+    cursor: pointer;
+}
+
+.feature .row .image-container .small-image img.image-active,
+.feature .row .image-container .small-image img:hover{
+    border:.2rem;
+    
+}
+
+.feature .row .content{
+    padding-left: 6rem;
+}
+.feature .row .content h2{
+    font-size: 4rem;
+    font-family: 'PT Serif', serif;
+    font-style: italic;
+    color:#000000e7;
+}
+.feature .row .content .stars i{
+    font-size: 2rem;
+    color:rgb(0, 0, 0);
+    padding: 1rem 0;
+}
+
+.feature .row .content .stars span{
+    font-size: 2rem;
+    color:#666;
+}
+
+.feature .row .content p{
+    color:#333;
+    width: 40rem;
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+
+.feature .row .content .price{
+    color:#000000;
+    font-size: 2rem;
+}
+
+.feature .row .content .price span{
+    color:#666;
+    text-decoration: line-through;
+    font-size: 1.5rem;
+}
+
+.feature .row .content .btn{
+    margin-left: 2rem;
+    border-radius: 5px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    background-color: #e7e7e7;
+    color:#000000;
+}
+
+
+
+
+@media (max-width:768px){
+
+    html{
+        font-size: 55%;
+    }
+    
+    .bestsellers .box-container{
+        width: auto;
+    }
+
+}
+

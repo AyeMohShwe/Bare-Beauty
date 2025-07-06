@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <!--Header Section Starts-->
+    <header>
+
+        <!--Header 1 for Logo, search bar and account, cart, wishlist-->
+        <div class="header-1"> 
+            <a href="#" class="logo">Bare Beauty </a>
+            <div class="form-container">
+                <form action="">
+                    <input type="search" placeholder="Search for Products or Brands" id="search" /> 
+                </form>
+            </div>
+            <ul>
+                <li><a href="account.html"> Account </a> <i class="fa fa-user-circle" aria-hidden="true"></i></li>
+                <li><a href="wishlist.html"> Wishlist </a> <i class="fa fa-heart" aria-hidden="true"></i></li>
+                <li><a href="cart.html"> Bag </a> <i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+
+        <!--Header 2 for Menu Bar-->
+
+        <div class="header-2" id="navbar"> 
+            <a href="index.html">Home</a>
+            <a href="bestsellers.html">Best Sellers</a>
+            <a href="allbrands.html">All Brands</a>
+            <a href="routine.html">Routine</a>
+            <div class="dropdown">
+                <button class="dropbtn">About Us
+                    <i class=""></i>
+                  </button>
+                <div class="aboutus-content">
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contactus.html">Contact Us</a>
+                </div>
+
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>   
+    
+    </header>
+<!--Header Section Ends-->
+
+<script>
+    function myFunction() {
+    var x = document.getElementById("navbar");
+    if (x.className === "header-2") {
+      x.className += " responsive";
+    } else {
+      x.className = "header-2";
+    }
+  }
+</script>
+<section class="contactus" id="contactus">
+    <div class="wrapper">
+        <form id="contactform" class="feedback" @submit="processForm"> 
+            <div class="input_field">
+            <h1>Contact Us by Providing Feedback</h1>
+            <p>First Name:</p>
+            <input type="text" v-model="fname" placeholder="Enter first name.."/>
+            <p>Last Name:</p>
+            <input type="text" v-model="lname" placeholder="Enter last name.."/>
+            <p>Email:</p>
+            <input type="text" v-model="email" placeholder="Enter your email.."/>
+            <p>Phone:</p>
+            <input type="text" v-model="phone" placeholder="Enter a valid phone no.."/>
+            </div>
+            <div class="input_field">
+                <select v-model="selected">
+                <option disabled value=" ">Select an option</option>
+                <option>Products Enquiry</option>
+                <option>Customer Service</option>
+                <option>Others</option>
+                </select>
+                <p>Selected: {{ selected }}</p>
+            </div>
+            <div class="input_field">
+                <p>Feedback:</p>
+                <textarea input type="feedback" name="feedback" placeholder="Write a feedback" v-model="feedback"></textarea>
+            </div>
+            <p v-if="errors.length">
+                <b>Please enter these forms to submit feedback:</b>
+                <ul>
+                <li v-for="error in errors">{{ error }}</li>
+                </ul>
+            </p>
+            <br>
+            <div id="error_message"></div>
+            <p class="demo">
+            <strong>Rate Your Experience: </strong>
+            <span v-if="rating == 1">☹️Could be Better</span>
+            <span v-else-if="rating == 2">😐Below Average</span>
+            <span v-else-if="rating == 3">🙂Normal</span>
+            <span v-else-if="rating == 4">😄Good</span>
+            <span v-else>😍Excellent</span>
+            <br>
+            <input type="range" min=1 max=5 v-model:value="rating">
+            </p>
+            <div class="btn">
+            <input type="Submit">
+            </div>
+        </form>
+    </div>
+</div>
+</section>
+
+
+<!--Footer contains social media links-->
+<footer>
+    <div class="box-container">
+
+        <div class="box">
+            <h3>contact us</h3>
+            <p> <i class="fas fa-home"></i>
+                Cave Town, London
+                England UK
+            </p>
+            <p> <i class="fas fa-phone"></i>
+                +1268399445
+            </p>
+            <p> <i class="fas fa-globe"></i>
+                north@barebeauty.skin.com
+            </p>
+        </div>
+
+    </div>
+
+<p class="credit"> created by <span>Aye Moh Moh Shwe</span> | all rights reserved. </p>
+
+
+</footer>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="main.js"></script>
+<script src="contactus.js"></script>
+
+</body>
+</html>

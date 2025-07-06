@@ -1,0 +1,57 @@
+
+.wrapper{
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: rgb(255, 222, 222);
+    border-radius: 5px;
+    box-shadow: 4px 4px 2px rgb(255, 250, 231); 
+}
+
+.wrapper h1{
+    font-family: 'PT Serif', serif;
+    font-size: 2rem;
+    text-align: center;
+    color: maroon;
+}
+.wrapper p{
+    font-size:15px;
+}
+.wrapper .input_field{
+    margin-bottom: 10px; 
+}
+
+.wrapper .input_field input[type="text"], .wrapper textarea{
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+}
+.wrapper textarea{
+    height: 80px;
+    resize: none;
+}
+
+.wrapper .btn input[type="submit"]{
+    border: 0;
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: maroon;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 55%;
+    }
+
+}
+

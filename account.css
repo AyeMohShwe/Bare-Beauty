@@ -1,0 +1,66 @@
+.container input, select{ /*external CSS*/
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=submit]{
+    background-color:#000000;
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color:rgb(254, 215, 255);
+}
+
+.container{
+    background-color:#ffffff;
+    padding: 20px;
+    margin: 70px;
+    align-content: center;
+    justify-content: center;
+}
+.container h2{
+    font-family: 'PT Serif',serif;
+    font-style: italic;
+    font-size: 30px;
+    color: maroon;
+    text-align: center;
+}
+#message{
+    display:none;
+    background:#ffffff;
+    color:#000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+} 
+#message p{
+    padding: 10px 35px;
+    font-size: 25px;
+}
+  
+.valid {
+    color:green;
+}
+  
+.valid:before {
+    position: relative;
+    left: -35px;
+}
+  
+.invalid {
+    color:red;
+}
+  
+.invalid:before{
+    position: relative;
+    left: -35px;
+    
+}

@@ -1,0 +1,26 @@
+.wishlist .btn{
+    margin:1.4rem 0;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #fc9b9b;
+    color:#000000;
+
+}
+.wishlist #new-wish{
+    border-radius: 2rem;
+    border: none;
+    padding: 15px 35px;
+}
+.wishlist p{
+    font-style: italic;
+    color:maroon;
+    font-size: 25px;
+
+}
+.wishlist{
+    align-content: center;
+    text-align: center;
+    font-size: 20px;
+}

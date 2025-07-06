@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="allbrands.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <!--Header Section Starts-->
+    <header>
+
+        <!--Header 1 for Logo, search bar and account, cart, whishlist-->
+        <div class="header-1"> 
+            <a href="#" class="logo">Bare Beauty </a>
+            <div class="form-container">
+                <form action="">
+                    <input type="search" placeholder="Search for Products or Brands" id="search" />
+                </form>
+            </div>
+            <ul>
+                <li><a href="account.html"> Account </a> <i class="fa fa-user-circle" aria-hidden="true"></i></li>
+                <li><a href="wishlist.html"> Wishlist </a> <i class="fa fa-heart" aria-hidden="true"></i></li>
+                <li><a href="cart.html"> Bag </a> <i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+
+        <!--Header 2 for Menu Bar-->
+
+        <div class="header-2" id="navbar"> 
+            <a href="index.html">Home</a>
+            <a href="bestsellers.html">Best Sellers</a>
+            <a href="allbrands.html">All Brands</a>
+            <a href="routine.html">Routine</a>
+            <div class="dropdown">
+                <button class="dropbtn">About Us
+                    <i class=""></i>
+                  </button>
+                <div class="aboutus-content">
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contactus.html">Contact Us</a>
+                </div>
+
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>  
+    
+    </header>
+<!--Header Section Ends-->
+
+<script>
+    function myFunction() {
+    var x = document.getElementById("navbar");
+    if (x.className === "header-2") {
+      x.className += " responsive";
+    } else {
+      x.className = "header-2";
+    }
+  }
+</script>
+<section class="AllBrands" id="AllBrands">
+    <h2>All Brands</h2>    
+        <div class="image-container">
+        
+            <div class="box Kiehl's">
+                <div class="image">
+                    <img src="Pictures/Kiehl's.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Kiehl's Ultra Facial Cream</h3>
+                    <div class="subInfo">
+                        <strong class="price">$45</strong>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="box Clinque">
+                <div class="image">
+                    <img src="Pictures/Clinque.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Clinque Cleansing Oil</h3>
+                    <div class="subInfo">
+                        <strong class="price">$65</strong>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="box Innisfree">
+                <div class="image">
+                    <img src="Pictures/Innisfree.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Innisfree Jeju Lotion</h3>
+                    <div class="subInfo">
+                        <strong class="price">$30</strong>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="box Neutrogena">
+                <div class="image">
+                    <img src="Pictures/Neutrogena.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Neutrogena Hydro Boost Gel</h3>
+                    <div class="subInfo">
+                        <strong class="price">$16</strong>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="box TheOrdinary">
+                <div class="image">
+                    <img src="Pictures/The Ordinary.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>The Ordinary Niacinamide</h3>
+                    <div class="subInfo">
+                        <strong class="price">$11</strong>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="box Origins">
+                <div class="image">
+                    <img src="Pictures/Origins.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Origins Miscellar Water</h3>
+                    <div class="subInfo">
+                        <strong class="price">$40</strong>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        
+            <div class="box GlowRecipe">
+                <div class="image">
+                    <img src="Pictures/GlowAvo.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Glow Recipe Avocado Mask</h3>
+                    <div class="subInfo">
+                        <strong class="price">$64</strong>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        
+            <div class="box Clinque">
+                <div class="image">
+                    <img src="Pictures/ClinqueMoisturiser.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Clinque Moisturiser</h3>
+                    <div class="subInfo">
+                        <strong class="price">$65</strong>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <img class="image" src="Pictures/BestSellingSet (1).jpg" alt="">
+                <h2>Best Selling KylieSkin Set</h2>
+                <p>Skincare Routine In One Complete Set</p>
+                <br>
+                <div id="app1">
+                    <div class="price">$120</div>
+                    <p>Select Product Quantity</p>
+                    <div id="amount">
+                    <div class="quantity">
+                        <quantity></quantity>
+                    </div>
+                </div>
+                </div>
+                <br>
+                <button class="bag"><span>add to bag</span></button>
+            </div>
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <img class="image" src="Pictures//Tools.jpg" alt="">
+                <h2>Rose Quartz Facial Roller</h2>
+                <p>Summer Sales Skincare Tools</p>
+                <br>
+                <div id="app2">
+                    <div class="price">$20</div>
+                    <p>Select Product Quantity</p>
+                    <div id="amount2">
+                    <div class="quantity">
+                        <quantity></quantity>
+                    </div>
+                </div>
+                </div>
+                <br>
+                <button class="bag"><span>add to bag</span></button>
+            </div>
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <img class="image" src="Pictures/LanegieBlue.jpg" alt="">
+                <h2>LANEIGE Sleeping Mask</h2>
+                <p>Up to 25% Off on First Purchase</p>
+                <br>
+                <div id="app3">
+                    <div class="price">$45</div>
+                    <p>Select Product Quantity</p>
+                    <div id="amount3">
+                    <div class="quantity">
+                        <quantity></quantity>
+                    </div>
+                </div>
+                </div>
+                <br>
+                <button class="bag"><span>add to bag</span></button>
+            </div>
+        </div>
+</div>
+        
+</section>
+
+<!--Footer contains social media links-->
+<footer>
+    <div class="box-container">
+
+        <div class="box">
+            <h3>contact us</h3>
+            <p> <i class="fas fa-home"></i>
+                Cave Town, London
+                England UK
+            </p>
+            <p> <i class="fas fa-phone"></i>
+                +1268399445
+            </p>
+            <p> <i class="fas fa-globe"></i>
+                north@barebeauty.skin.com
+            </p>
+        </div>
+
+    </div>
+
+<p class="credit"> created by <span>Aye Moh Moh Shwe</span> | all rights reserved. </p>
+
+
+</footer>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="main.js"></script>
+<script src="allbrands.js"></script>
+
+</body>
+</html>

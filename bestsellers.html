@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bestsellers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <!--Header Section Starts-->
+    <header>
+
+        <!--Header 1 for Logo, search bar and account, cart, whishlist-->
+        <div class="header-1"> 
+            <a href="#" class="logo">Bare Beauty </a>
+            <div class="form-container">
+                <form action="">
+                    <input type="search" placeholder="Search for Products or Brands" id="search" /> 
+                </form>
+            </div>
+            <ul>
+                <li><a href="account.html"> Account </a> <i class="fa fa-user-circle" aria-hidden="true"></i></li>
+                <li><a href="wishlist.html"> Wishlist </a> <i class="fa fa-heart" aria-hidden="true"></i></li>
+                <li><a href="cart.html"> Bag </a> <i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+
+        <!--Header 2 for Menu Bar-->
+
+        <div class="header-2" id="navbar"> 
+            <a href="index.html">Home</a>
+            <a href="bestsellers.html">Best Sellers</a>
+            <a href="allbrands.html">All Brands</a>
+            <a href="routine.html">Routine</a>
+            <div class="dropdown">
+                <button class="dropbtn">About Us
+                    <i class=""></i>
+                  </button>
+                <div class="aboutus-content">
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contactus.html">Contact Us</a>
+                </div>
+
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div> 
+    </header>
+<!--Header Section Ends-->
+
+<script>
+    function myFunction() {
+    var x = document.getElementById("navbar");
+    if (x.className === "header-2") {
+      x.className += " responsive";
+    } else {
+      x.className = "header-2";
+    }
+  }
+</script>
+
+<section class="bestsellers" id="bestsellers">
+    <h2>Best Selling Products</h2>
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="Pictures/GlowAvo.jpg" alt="">
+            </div>
+            <div class="info">
+                <p>Glow Recipe Avocado Sleeping Mask</p>
+                <div class="subInfo">
+                    <strong class="price"> $64 </strong>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay">
+                <a href="#" style="--i:1;" class="fas fa-heart"></a>
+                <a href="#" style="--i:2;" class="fas fa-shopping-cart"></a>
+                <a href="#" style="--i:3;" class="fas fa-search"></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <div class="image">
+                <img src="Pictures/Estee Lauder.jpg" alt="">
+            </div>
+            <div class="info">
+                <p>Estee Lauder Advanced Night Repair Eye</p>
+                <div class="subInfo">
+                    <strong class="price"> $129 </strong>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay">
+                <a href="#" style="--i:1;" class="fas fa-heart"></a>
+                <a href="#" style="--i:2;" class="fas fa-shopping-cart"></a>
+                <a href="#" style="--i:3;" class="fas fa-search"></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <div class="image">
+                <img src="Pictures/Fresh.jpg" alt="">
+            </div>
+            <div class="info">
+                <p>Freash Rose Deep Hydration Face Cream</p>
+                <div class="subInfo">
+                    <strong class="price"> $26 </strong>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay">
+                <a href="#" style="--i:1;" class="fas fa-heart"></a>
+                <a href="#" style="--i:2;" class="fas fa-shopping-cart"></a>
+                <a href="#" style="--i:3;" class="fas fa-search"></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <div class="image">
+                <img src="Pictures/ClinqueMoisturiser.jpg" alt="">
+            </div>
+            <div class="info">
+                <p>Clinque Turnaround Overnight Revitalizing Moisturiser</p>
+                <div class="subInfo">
+                    <strong class="price"> $75 </strong>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay">
+                <a href="#" style="--i:1;" class="fas fa-heart"></a>
+                <a href="#" style="--i:2;" class="fas fa-shopping-cart"></a>
+                <a href="#" style="--i:3;" class="fas fa-search"></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <div class="image">
+                <img src="Pictures/LengieLipMask.jpg" alt="">
+            </div>
+            <div class="info">
+                <p>Langie Lip Sleeping Mask</p>
+                <div class="subInfo">
+                    <strong class="price"> $28 </strong>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay">
+                <a href="#" style="--i:1;" class="fas fa-heart"></a>
+                <a href="#" style="--i:2;" class="fas fa-shopping-cart"></a>
+                <a href="#" style="--i:3;" class="fas fa-search"></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <div class="image">
+                <img src="Pictures/Neutrogena.jpg" alt="">
+            </div>
+            <div class="info">
+                <p>Neutrogena Hydro Boost Water Gel</p>
+                <div class="subInfo">
+                    <strong class="price"> $16 </strong>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay">
+                <a href="#" style="--i:1;" class="fas fa-heart"></a>
+                <a href="#" style="--i:2;" class="fas fa-shopping-cart"></a>
+                <a href="#" style="--i:3;" class="fas fa-search"></a>
+            </div>
+        </div>
+    
+    </div>
+    
+</section>
+<section class="feature" id="feature">
+    
+    <div class="row">
+    
+        <div class="image-container">
+    
+            <div class="big-image">
+                <img src="Pictures/BundleFeature.jpg" alt="">
+            </div>
+    
+            <div class="small-image">
+                <img class="image-active" src="Pictures/Facial Oil.jpg" alt="">
+                <img src="Pictures/KylieCleanser.jpg" alt="">
+                <img src="Pictures/FacialOil.jpg" alt="">
+                <img src="Pictures/Scrub.jpg" alt="">
+            </div>
+    
+        </div>
+    
+        <div class="content">
+    
+            <h2>Essential Kit</h2>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(1,450+) reviews</span>
+            </div>
+            <p>Essential Skincare Package contains facial oil, clay mask, moisturiser, cleanser, lip cream and scrub! </p>
+            <strong class="price">$225 <span>$250</span> </strong>
+            <a href="#"><button class="btn">buy now</button></a>
+    
+        </div>
+    
+    </div>
+    
+</section>
+
+<section class="aboutus" id="aboutus">
+    <div class="aboutus-pic">
+        <img src="Images/Banner4.jpg" alt="">
+    </div>
+
+</section>
+
+<!--Footer contains social media links-->
+<footer>
+    <div class="box-container">
+
+        <div class="box">
+            <h3>contact us</h3>
+            <p> <i class="fas fa-home"></i>
+                Cave Town, London
+                England UK
+            </p>
+            <p> <i class="fas fa-phone"></i>
+                +1268399445
+            </p>
+            <p> <i class="fas fa-globe"></i>
+                north@barebeauty.skin.com
+            </p>
+        </div>
+
+    </div>
+
+<p class="credit"> created by <span>Aye Moh Moh Shwe</span> | all rights reserved. </p>
+
+
+</footer>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="main.js"></script>
+
+</body>
+</html>
