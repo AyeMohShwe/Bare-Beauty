@@ -8,3 +8,6 @@ Bare Beauty is a responsive e-commerce skincare website that showcases clean UI/
 - Responsive design for mobile and desktop
 
 - Clean layout focused on visual appeal and usability
+
+### 🌐 Live Demo
+[Click here to view the site] https://github.com/AyeMohShwe/Bare-Beauty
